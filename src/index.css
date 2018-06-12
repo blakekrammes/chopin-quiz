@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Unicase', serif;
+  list-style: none;
+}
+
+html {
+  background: url('https://media.wnyc.org/i/800/0/c/85/1/maxresdefault_kmQ7K9g.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-left: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 30px;
+  color: rgb(255	255	240);
+}
+
+h1, h2 {
+  color: rgb(255	255	240);
+}
+
+fieldset {
+  height: 500px;
+  position: relative;
+  border: none;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+.input-li {
+  padding: 15px 0;
+  background: rgba(176, 152, 17, .3);
+  cursor: pointer;
+  max-width: 20%;
+  margin: 10px 0;
+  transition: background 1s, color 1s;
+  display: block;
+  margin-top: -10px;
+  font-size: 20px;
+}
+
+.input-li:hover {
+  transition: background 1s, color 1s;
+  background: rgba(176, 152, 17, .7);
+  color: rgb(255, 255, 240);
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid rgba(128, 111, 18, 0.6);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  left: 5px;
+  max-width: 30%;
+  outline: none;
+  margin-top: 3.5px;
+}
+
+input:checked {
+    border: 8px solid rgb(42, 36, 26, 0.7); 
+}
+
+fieldset label {
+  cursor: pointer;
+  position: relative;
+  left: 15px;
+  width: 35%;
+}
+
+button {
+  background: rgba(190, 153, 75, .3);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background .8s, border .8s, color .8s;
+  padding: 25px 65px;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: rgba(176, 152, 17, .7);
+  color: rgb(255	255	240);
+  transition: background 2s, color .8s;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.answer-option {
+  padding: 0 15px;
+}
+
+.img-container {
+  width: 100%;
+  padding-right: 9px;
+}
+
+.portrait-ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  height: 600px;
+}
+
+.portraits {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 1.5px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+  background: url('https://media.wnyc.org/i/800/0/c/85/1/maxresdefault_kmQ7K9g.jpg');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 40%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+  body {
+    margin-left: 0;
+  }
+  button {
+    width: 100%;
+  }
+  .input-li {
+    max-width: 100%;
+  }
+  p, h1, h2 {
+    text-align: center;
+  }
+}

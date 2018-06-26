@@ -22,32 +22,40 @@ function startQuiz() {
 function createQuestion() {
     if (questionNumber < data.length) {
     $('.main-container').html(`<div class="container">
-    <p class="question-text">Question <span class="questionNumber"></span> of Six</p>
-    <form class="quiz-question-form">
+    <header role="banner">
+    <h1 class="question-text">Question <span class="questionNumber"></span> of Six</h1>
+    </header>
+    <main role="main">
+    <form class="quiz-question-form" role="form">
     <fieldset name="quiz-answers">
     <legend>${data[questionNumber].question}</legend>
+    <section role="radiogroup">
     <ul>
     <li class="input-li">
-    <label for="opt1" class="answer-option">${data[questionNumber].answers[0]}</label>
-    <input id="opt1" type="radio" value="${data[questionNumber].answers[0]}" name="answer" required>
+    <label for="option1" class="answer-option" aria-label="answer1">${data[questionNumber].answers[0]}</label>
+    <input id="option1" type="radio" value="${data[questionNumber].answers[0]}" name="answer" aria-checked="false" required>
     </li>
     <li class="input-li">
-    <label for="opt2" class="answer-option">${data[questionNumber].answers[1]}</label>
-    <input id="no2" type="radio" value="${data[questionNumber].answers[1]}" name="answer" required>
+    <label for="option2" class="answer-option" aria-label="answer2">${data[questionNumber].answers[1]}</label>
+    <input id="option2" type="radio" value="${data[questionNumber].answers[1]}" name="answer" aria-checked="false" required>
     </li>
     <li class="input-li">
-    <label for="opt3" class="answer-option">${data[questionNumber].answers[2]}</label>
-    <input id="opt3" type="radio" value="${data[questionNumber].answers[2]}" name="answer" required>
+    <label for="option3" class="answer-option" aria-label="answer3">${data[questionNumber].answers[2]}</label>
+    <input id="option3" type="radio" value="${data[questionNumber].answers[2]}" name="answer" aria-checked="false" required>
     </li>
     <li class="input-li">
-    <label for="opt4" class="answer-option">${data[questionNumber].answers[3]}</label>
-    <input id="opt4" type="radio" value="${data[questionNumber].answers[3]}" name="answer" required>
+    <label for="option4" class="answer-option" aria-label="answer4">${data[questionNumber].answers[3]}</label>
+    <input id="option4" type="radio" value="${data[questionNumber].answers[3]}" name="answer" aria-checked="false" required>
     </li>
     </ul>
-    <button class="button submit-button" type="submit">Submit</button>
+    </section>
+    <button class="button submit-button" type="submit" aria-pressed="false">Submit</button>
     </fieldset>
     </form>
+    </main>
+    <section role="region">
     <h2 id="scores"><span id="correctScore">Correct: ${scoreNums[scoreNumsI]}</span><span id="incorrectScore">Incorrect: ${incorrectScoreNums[incorrectScoreNumsI]}</span></h2>
+    </section>
     </div>`); 
     $('.questionNumber').text(numberName[questionNumber]);
     showPortraits();
@@ -63,14 +71,14 @@ function showPortraits() {
     $('fieldset').append(`
     <div class="portraits-container">
     <ul class="portrait-ul">
-    <li><div class="img-container"><p>One</p><img class="portraits" src="../resources/portrait1.jpg" alt="portrait1"></div>
+    <li><div class="img-container"><p>One</p><img class="portraits" src="resources/portrait1.jpg" alt="portrait1"></div>
     </li>
-    <li><div class="img-container"><p>Two</p><img class="portraits" src="../resources/portrait2.jpg" alt="portrait2"></div>
+    <li><div class="img-container"><p>Two</p><img class="portraits" src="resources/portrait2.jpg" alt="portrait2"></div>
     </li>
     <li>
-    <div class="img-container"><p>Three</p><img class="portraits" src="../resources/portrait3.jpg" alt="portrait3"></div>
+    <div class="img-container"><p>Three</p><img class="portraits" src="resources/portrait3.jpg" alt="portrait3"></div>
     </li>
-    <li><div class="img-container"><p id="p4">Four</p><img class="portraits" src="../resources/portrait4.jpg" alt="portrait4"></div>
+    <li><div class="img-container"><p id="p4">Four</p><img class="portraits" src="resources/portrait4.jpg" alt="portrait4"></div>
     </li>
     </ul>
     </div>`);
